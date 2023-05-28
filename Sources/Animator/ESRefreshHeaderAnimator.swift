@@ -111,14 +111,20 @@ open class ESRefreshHeaderAnimator: UIView, ESRefreshProtocol, ESRefreshAnimator
         guard self.state != state else {
             return
         }
+        let s = self.bounds.size
+        let w = s.width
+        let h = s.height
         self.state = state
         
         switch state {
         case .refreshing, .autoRefreshing:
+            
+            titleLabel.center = CGPoint.init(x: (w / 2.0) + 16.0, y: h / 2.0)
             titleLabel.text = loadingDescription
             self.setNeedsLayout()
             break
         case .releaseToRefresh:
+            titleLabel.center = CGPoint.init(x: (w / 2.0), y: h / 2.0)
             titleLabel.text = releaseToRefreshDescription
             self.setNeedsLayout()
             self.impact()
@@ -128,6 +134,7 @@ open class ESRefreshHeaderAnimator: UIView, ESRefreshProtocol, ESRefreshAnimator
             }) { (animated) in }
             break
         case .pullToRefresh:
+            titleLabel.center = CGPoint.init(x: (w / 2.0), y: h / 2.0)
             titleLabel.text = pullToRefreshDescription
             self.setNeedsLayout()
             UIView.animate(withDuration: 0.2, delay: 0.0, options: UIView.AnimationOptions(), animations: {
