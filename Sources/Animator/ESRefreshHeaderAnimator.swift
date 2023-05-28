@@ -30,14 +30,14 @@ import UIKit
 
 @available(iOS 13.0, *)
 open class ESRefreshHeaderAnimator: UIView, ESRefreshProtocol, ESRefreshAnimatorProtocol, ESRefreshImpactProtocol {
-    open var pullToRefreshDescription = NSLocalizedString("Pull to refresh", comment: "") {
+    open var pullToRefreshDescription = NSLocalizedString("Pull to refresh          ", comment: "") {
         didSet {
             if pullToRefreshDescription != oldValue {
                 titleLabel.text = pullToRefreshDescription;
             }
         }
     }
-    open var releaseToRefreshDescription = NSLocalizedString("Release to refresh", comment: "")
+    open var releaseToRefreshDescription = NSLocalizedString("Release to refresh            ", comment: "")
     open var loadingDescription = NSLocalizedString("checking for more 🗞...", comment: "")
 
     open var view: UIView { return self }
@@ -121,11 +121,13 @@ open class ESRefreshHeaderAnimator: UIView, ESRefreshProtocol, ESRefreshAnimator
         case .refreshing, .autoRefreshing:
             
             titleLabel.center = CGPoint.init(x: (w / 2.0) + 16.0, y: h / 2.0)
+            self.layoutIfNeeded()
             titleLabel.text = loadingDescription
             self.setNeedsLayout()
             break
         case .releaseToRefresh:
             titleLabel.center = CGPoint.init(x: (w / 2.0), y: h / 2.0)
+            self.layoutIfNeeded()
             titleLabel.text = releaseToRefreshDescription
             self.setNeedsLayout()
             self.impact()
@@ -136,6 +138,7 @@ open class ESRefreshHeaderAnimator: UIView, ESRefreshProtocol, ESRefreshAnimator
             break
         case .pullToRefresh:
             titleLabel.center = CGPoint.init(x: (w / 2.0), y: h / 2.0)
+            self.layoutIfNeeded()
             titleLabel.text = pullToRefreshDescription
             self.setNeedsLayout()
             UIView.animate(withDuration: 0.2, delay: 0.0, options: UIView.AnimationOptions(), animations: {
