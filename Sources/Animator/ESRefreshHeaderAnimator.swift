@@ -37,7 +37,7 @@ open class ESRefreshHeaderAnimator: UIView, ESRefreshProtocol, ESRefreshAnimator
         }
     }
     open var releaseToRefreshDescription = NSLocalizedString("Release to refresh", comment: "")
-    open var loadingDescription = NSLocalizedString("Loading...", comment: "")
+    open var loadingDescription = NSLocalizedString("checking for more 🗞...", comment: "")
 
     open var view: UIView { return self }
     open var insets: UIEdgeInsets = UIEdgeInsets.zero
