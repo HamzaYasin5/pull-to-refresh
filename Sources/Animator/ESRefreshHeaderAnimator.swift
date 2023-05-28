@@ -28,6 +28,7 @@ import Foundation
 import QuartzCore
 import UIKit
 
+@available(iOS 13.0, *)
 open class ESRefreshHeaderAnimator: UIView, ESRefreshProtocol, ESRefreshAnimatorProtocol, ESRefreshImpactProtocol {
     open var pullToRefreshDescription = NSLocalizedString("Pull to refresh", comment: "") {
         didSet {
