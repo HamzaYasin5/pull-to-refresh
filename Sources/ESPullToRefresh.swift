@@ -196,7 +196,7 @@ public extension UIScrollView /* Date Manager */ {
     
 }
 
-
+@available(iOS 13.0, *)
 open class ESRefreshHeaderView: ESRefreshComponent {
     fileprivate var previousOffset: CGFloat = 0.0
     fileprivate var scrollViewInsets: UIEdgeInsets = UIEdgeInsets.zero
