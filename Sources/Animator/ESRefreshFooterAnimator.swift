@@ -41,13 +41,13 @@ open class ESRefreshFooterAnimator: UIView, ESRefreshProtocol, ESRefreshAnimator
     fileprivate let titleLabel: UILabel = {
         let label = UILabel.init(frame: CGRect.zero)
         label.font = UIFont.systemFont(ofSize: 14.0)
-        label.textColor = UIColor.init(white: 160.0 / 255.0, alpha: 1.0)
+        label.textColor = .secondaryLabel
         label.textAlignment = .center
         return label
     }()
     
     fileprivate let indicatorView: UIActivityIndicatorView = {
-        let indicatorView = UIActivityIndicatorView.init(style: .gray)
+        let indicatorView = UIActivityIndicatorView.init(style: .medium)
         indicatorView.isHidden = true
         return indicatorView
     }()
