@@ -29,6 +29,7 @@ import UIKit
 private var kESRefreshHeaderKey: Void?
 private var kESRefreshFooterKey: Void?
 
+@available(iOS 13.0, *)
 public extension UIScrollView {
     
     /// Pull-to-refresh associated property
@@ -44,6 +45,7 @@ public extension UIScrollView {
     }
 }
 
+@available(iOS 13.0, *)
 public extension ES where Base: UIScrollView {
     /// Add pull-to-refresh
     @discardableResult
@@ -148,6 +150,7 @@ public extension ES where Base: UIScrollView {
     
 }
 
+@available(iOS 13.0, *)
 public extension UIScrollView /* Date Manager */ {
     
     /// Identifier for cache expired timeinterval and last refresh date.
@@ -337,6 +340,7 @@ open class ESRefreshHeaderView: ESRefreshComponent {
     
 }
 
+@available(iOS 13.0, *)
 open class ESRefreshFooterView: ESRefreshComponent {
     fileprivate var scrollViewInsets: UIEdgeInsets = UIEdgeInsets.zero
     open var noMoreData = false {

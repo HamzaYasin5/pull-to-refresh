@@ -25,6 +25,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 open class ESRefreshFooterAnimator: UIView, ESRefreshProtocol, ESRefreshAnimatorProtocol {
 
     open var loadingMoreDescription: String = NSLocalizedString("Loading more", comment: "")
