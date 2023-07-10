@@ -30,14 +30,14 @@ import UIKit
 
 @available(iOS 13.0, *)
 open class ESRefreshHeaderAnimator: UIView, ESRefreshProtocol, ESRefreshAnimatorProtocol, ESRefreshImpactProtocol {
-    open var pullToRefreshDescription = NSLocalizedString("Pull to refresh          ", comment: "") {
+    open var pullToRefreshDescription = NSLocalizedString("Pull to refresh       ", comment: "") {
         didSet {
             if pullToRefreshDescription != oldValue {
                 titleLabel.text = pullToRefreshDescription;
             }
         }
     }
-    open var releaseToRefreshDescription = NSLocalizedString("Release to refresh            ", comment: "")
+    open var releaseToRefreshDescription = NSLocalizedString("Release to refresh         s", comment: "")
     open var loadingDescription = NSLocalizedString("checking for more 🗞...", comment: "")
 
     open var view: UIView { return self }
