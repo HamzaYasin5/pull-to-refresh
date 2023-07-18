@@ -94,7 +94,7 @@ public class MTRefreshFooterAnimator: UIView, ESRefreshProtocol, ESRefreshAnimat
         let s = self.bounds.size
         let w = s.width
         let h = s.height
-        titleLabel.frame = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: self.bounds.width, height: self.bounds.height + 8)
+        titleLabel.frame = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: self.bounds.width, height: self.bounds.height + 20)
         indicatorView.center = CGPoint.init(x: 32.0, y: h / 2.0)
         topLine.frame = CGRect.init(x: 0.0, y: 0.0, width: w, height: 0.5)
         bottomLine.frame = CGRect.init(x: 0.0, y: h - 1.0, width: w, height: 1.0)
